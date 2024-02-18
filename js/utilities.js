@@ -23,19 +23,3 @@ function totalPrice(elementId, seatNum) {
   return updatedPrice;
 }
 // document.getElementById(seatId).setAttribute("disabled", true);
-function enableButton(value) {
-  const phoneInput = document.getElementById("phone-input");
-  const nextButton = document.getElementById("next-button");
-
-  phoneInput.addEventListener("keyup", function () {
-    const phoneInputValue = phoneInput.value;
-    // console.log(phoneInputValue.length);
-    if (value >= 1 && phoneInputValue.length > 0) {
-      // console.log(phoneInputValue.length);
-      nextButton.removeAttribute("disabled");
-    } else {
-      alert("Please provide your phone number.");
-      nextButton.setAttribute("disabled", true);
-    }
-  });
-}

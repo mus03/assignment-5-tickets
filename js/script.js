@@ -19,7 +19,7 @@ for (const row of parentDivChildren) {
           let currentSeatsLeft = getId("current-seatsLeft");
           let updatedSeatsLeft = parseInt(currentSeatsLeft) - 1;
           setValueByElementById("current-seatsLeft", updatedSeatsLeft);
-          enableButton(updatedSeats);
+          // enableButton(updatedSeats);
           const seatAddition = document.getElementById("seat-addition");
           const eachRow = document.createElement("tr");
           const p1 = document.createElement("td");
@@ -31,6 +31,8 @@ for (const row of parentDivChildren) {
           eachRow.appendChild(p1);
           eachRow.appendChild(p2);
           eachRow.appendChild(p3);
+          eachRow.style.display = "flex";
+          eachRow.style.justifyContent = "space-around";
           seatAddition.appendChild(eachRow);
           const updatedPrice = totalPrice("current-price", updatedSeats);
           totalPrice("current-grandPrice", updatedSeats);
@@ -55,3 +57,22 @@ function btn() {
     document.getElementById("coupon-box").classList.add("hidden");
   }
 }
+// function enableButton() {
+document.getElementById("phone-input").addEventListener("keyup", function () {
+  const nextButton = document.getElementById("next-button");
+  const CS = getId("current-seats");
+  let numCS = parseInt(CS);
+  console.log(numCS);
+  const phoneInputValue = document.getElementById("phone-input").value;
+  // for (let i = 0; i > 4; i++) {
+  if (phoneInputValue.length > 0) {
+    if (numCS === 0) {
+      alert("Please select atleast one seat then put your number.");
+      nextButton.setAttribute("disabled", true);
+    }
+  } else if (phoneInputValue.length > 0 && numCS > 0) {
+    // alert("Please provide your number");
+    nextButton.setAttribute("disabled", true);
+  }
+});
+// }

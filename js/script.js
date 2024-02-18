@@ -55,6 +55,7 @@ function btn() {
     setValueByElementById("current-grandPrice", updatedGrandPrice);
   } else {
     document.getElementById("coupon-box").classList.add("hidden");
+    setValueByElementById("current-grandPrice", CP);
   }
 }
 // function enableButton() {

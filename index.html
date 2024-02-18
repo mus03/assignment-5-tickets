@@ -392,7 +392,7 @@
               <h3 class="font-bold text-lg">Class</h3>
               <h3 class="font-bold text-lg">Price</h3>
             </div>
-            <table id="seat-addition" class="border w-[90%] mx-auto"></table>
+            <table id="seat-addition" class="w-[90%] mx-auto"></table>
             <div class="divider w-[90%] mx-auto"></div>
             <div class="flex justify-between px-6 mb-4">
               <h3 class="font-bold text-lg">Total Price</h3>
@@ -400,19 +400,25 @@
                 BDT <span id="current-price">00</span>
               </h3>
             </div>
-            <div class="join w-[90%] mx-4 border">
+            <div id="coupon-box" class="join w-[90%] mx-4 border">
               <input
                 id="coupon-input"
                 class="input input-bordered join-item w-[90%]"
                 placeholder=" Have any coupon?"
               />
-              <button class="btn join-item px-6 bg-[#1DD100] text-white">
+              <button
+                onclick="btn()"
+                id="apply-btn"
+                class="btn join-item px-6 bg-[#1DD100] text-white"
+              >
                 Apply
               </button>
             </div>
             <div class="flex justify-between px-6 mt-4">
               <h3 class="font-bold text-lg">Grand Total</h3>
-              <h3 class="font-bold text-lg">BDT 00</h3>
+              <h3 class="font-bold text-lg">
+                BDT <span id="current-grandPrice">00</span>
+              </h3>
             </div>
           </div>
           <!-- passenger details section -->
@@ -489,20 +495,20 @@
       </div>
     </main>
     <!-- footer section -->
-    <footer class="bg-[#030712] font-raleway p-18 lg:p-36">
+    <footer class="bg-[#030712] font-raleway p-8 lg:p-36">
       <!-- first part -->
       <div
         class="flex flex-col lg:flex-row justify-between pb-10 text-white border-b-2 border-dashed border-[#ffffff4d]"
       >
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold">P-Ticket</h3>
-          <p class="text-[#ffffffb3]">
+          <h3 class="text-xl lg:text-2xl font-bold">P-Ticket</h3>
+          <p class="text-sm lg:text-base text-[#ffffffb3]">
             P-Ticket is a digital platform to make your<br />
             daily commuting better.
           </p>
         </div>
         <div>
-          <p class="mb-4 lg:text-center">Download our app</p>
+          <p class="mb-4 my-4 lg:my-0 lg:text-center">Download our app</p>
           <button class="btn bg-[#030712] text-white rounded-lg">
             <img src="images/playstore.png" alt="" />
             <p class="text-left font-thin text-md">
@@ -516,8 +522,12 @@
       <div
         class="flex flex-col lg:flex-row justify-between mt-4 text-[#ffffffb3]"
       >
-        <p>@all rights reserved, P-Ticket services limited.2024</p>
-        <div class="flex flex-col lg:flex-row gap-4">
+        <p class="text-sm lg:text-base">
+          @all rights reserved, P-Ticket services limited.2024
+        </p>
+        <div
+          class="flex flex-col lg:flex-row gap-4 lg:mt-0 mt-4 text-sm lg:text-base"
+        >
           <a href="">Terms & condition</a>
           <a href="">Return & refund policy</a>
           <a href="">Privacy policy</a>

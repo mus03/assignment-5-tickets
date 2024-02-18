@@ -14,7 +14,7 @@
   </head>
   <body class="">
     <!-- header section -->
-    <header class="w-[95%] lg:w-[85%] mx-auto my-10 font-raleway">
+    <header class="w-[95%] lg:w-[85%] mx-auto my-5 lg:my-10 font-raleway">
       <!-- nav-section -->
       <nav class="my-4">
         <div class="navbar bg-base-100">
@@ -132,8 +132,8 @@
             <div
               class="px-8 py-4 lg:p-16 lg:border-none border-b-2 border-dashed"
             >
-              <h3 class="font-extrabold text-4xl">15% OFF</h3>
-              <p class="font-semibold text-xl">
+              <h3 class="font-extrabold text-2xl lg:text-4xl">15% OFF</h3>
+              <p class="font-semibold text-md lg:text-xl">
                 on your next purchase<br /><span class="text-[#00000080]"
                   >use by January 2024</span
                 >
@@ -141,7 +141,7 @@
             </div>
             <img class="hidden lg:flex" src="images/cupon-devider.png" alt="" />
             <div class="pb-8 pt-2 lg:py-16 px-2 ml-8 mt-0 lg:mt-4">
-              <h3 class="font-bold text-2xl">NEW15</h3>
+              <h3 class="font-bold text-xl lg:text-2xl">NEW15</h3>
               <p class="text-[#00000080]">coupon Code</p>
             </div>
           </div>
@@ -152,8 +152,8 @@
             <div
               class="px-8 py-4 lg:p-16 lg:border-none border-b-2 border-dashed"
             >
-              <h3 class="font-extrabold text-4xl">20% OFF</h3>
-              <p class="font-semibold text-xl">
+              <h3 class="font-extrabold text-2xl lg:text-4xl">20% OFF</h3>
+              <p class="font-semibold text-md lg:text-xl">
                 on your next purchase<br /><span class="text-[#00000080]"
                   >use by January 2024</span
                 >
@@ -161,7 +161,7 @@
             </div>
             <img class="hidden lg:flex" src="images/cupon-devider.png" alt="" />
             <div class="pb-8 pt-2 lg:py-16 px-2 ml-8 mt-0 lg:mt-4">
-              <h3 class="font-bold text-2xl">Couple 20</h3>
+              <h3 class="font-bold text-xl lg:text-2xl">Couple 20</h3>
               <p class="text-[#00000080]">coupon Code</p>
             </div>
           </div>
@@ -176,35 +176,41 @@
     <!-- main section -->
     <main
       id="main-section"
-      class="border-t-4 border-[#1DD100] rounded-3xl mx-auto bg-[#F7F8F8] py-8"
+      class="font-raleway border-t-4 border-[#1DD100] rounded-3xl mx-auto bg-[#F7F8F8] py-8"
     >
       <div class="text-center my-10">
-        <h1 class="text-4xl font-bold mb-4">P.H Paribahan</h1>
-        <p class="w-[80%] mx-auto">
+        <h1 class="text-2xl lg:text-4xl font-bold mb-4">P.H Paribahan</h1>
+        <p class="w-[95%] lg:w-[80%] mx-auto">
           Yes, you can run unit tests and view the results directly within the
           app. <br />The integrated testing features allow for a streamlined .
         </p>
       </div>
       <!-- ticket -->
       <div
-        class="flex flex-col lg:flex-row rounded-3xl border-none w-[95%] lg:w-[85%] mx-auto gap-10 bg-white mb-10"
+        class="flex flex-col lg:flex-row rounded-3xl border-none w-[95%] lg:w-[85%] mx-auto gap-5 lg:gap-10 bg-white mb-10"
       >
         <!-- left side -->
 
-        <div class="flex flex-col w-[75%]">
+        <div class="flex flex-col w-full lg:w-[75%]">
           <!-- seats -->
           <div
-            class="flex flex-col lg:flex-row justify-between items-center w-[95%] mx-auto py-10 pl-5"
+            class="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0 items-center w-[95%] mx-auto lg:py-10 lg:pl-5"
           >
-            <div class="flex gap-4 w-[50%]">
-              <img class="w-[20%] h-[10vh]" src="images/bus-logo.png" alt="" />
+            <div class="flex gap-4 w-full lg:w-[50%]">
+              <img
+                class="w-[25%] lg:w-[20%] h-full lg:h-[10vh]"
+                src="images/bus-logo.png"
+                alt=""
+              />
               <div class="flex flex-col">
-                <h3 class="font-bold text-3xl">Greenline Paribahan</h3>
-                <p>Coach-009-WEB ! AC_Business</p>
+                <h3 class="font-bold text-xl lg:text-3xl">
+                  Greenline Paribahan
+                </h3>
+                <p class="text-xs lg:text-base">Coach-009-WEB ! AC_Business</p>
               </div>
             </div>
             <div>
-              <button class="btn flex gap-2">
+              <button class="btn flex gap-2 bg-[#1DD1004D]">
                 <img src="images/seat-green.png" alt="" />
                 <p class="text-[#1DD100]">
                   <span id="current-seatsLeft">40</span> Seats left
@@ -213,12 +219,14 @@
             </div>
           </div>
           <!-- route -->
-          <div class="bg-[#F7F8F8] w-[95%] mx-10 rounded-xl p-4">
+          <div
+            class="bg-[#F7F8F8] w-[95%] mx-auto my-4 lg:my-0 lg:mx-10 rounded-xl p-4"
+          >
             <div class="flex justify-between">
               <p>
                 <input placeholder="Route" class="bg-[#F7F8F8]" type="text" />
               </p>
-              <p>Dhaka-Sylhet</p>
+              <p class="text-xs lg:text-base">Dhaka-Sylhet</p>
             </div>
             <div class="divider"></div>
             <div class="flex justify-between">
@@ -229,10 +237,12 @@
                   type="text"
                 />
               </p>
-              <p>9.00 PM</p>
+              <p class="text-xs lg:text-base">9.00 PM</p>
             </div>
             <div class="divider"></div>
-            <div class="flex flex-col lg:flex-row justify-between">
+            <div
+              class="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0"
+            >
               <button class="btn">Boarding Point - Laxmipur</button>
               <button class="btn">Dropping Point - Bogura</button>
               <button class="btn">Est. Time - 11 Hour</button>
@@ -241,7 +251,9 @@
         </div>
         <!-- right side -->
         <img class="hidden lg:flex" src="images/info-devider.png" alt="" />
-        <div class="flex flex-col justify-center items-center mr-12 w-[10%]">
+        <div
+          class="flex flex-col justify-center items-center lg:mr-12 mb-4 lg:mb-0 w-full lg:w-[10%]"
+        >
           <img src="images/fare.png" alt="" />
           <h3 class="text-2xl font-bold">550 Taka</h3>
           <p class="font-bold">Per Seat</p>
@@ -369,25 +381,28 @@
             <div
               class="w-[90%] mx-auto flex justify-around border-b-2 border-dashed pb-4"
             >
-              <h3>
+              <h3 class="font-bold text-lg">
                 Seat
                 <span
                   id="current-seats"
-                  class="bg-[#1DD100] text-white font-bold rounded-xl px-4"
+                  class="bg-[#1DD100] text-white font-bold rounded-xl px-2"
                   >0</span
                 >
               </h3>
-              <h3>Class</h3>
-              <h3>Price</h3>
+              <h3 class="font-bold text-lg">Class</h3>
+              <h3 class="font-bold text-lg">Price</h3>
             </div>
-            <div></div>
+            <table id="seat-addition" class="border w-[90%] mx-auto"></table>
             <div class="divider w-[90%] mx-auto"></div>
             <div class="flex justify-between px-6 mb-4">
-              <h3>Total Price</h3>
-              <h3>BDT 00</h3>
+              <h3 class="font-bold text-lg">Total Price</h3>
+              <h3 class="font-bold text-lg">
+                BDT <span id="current-price">00</span>
+              </h3>
             </div>
             <div class="join w-[90%] mx-4 border">
               <input
+                id="coupon-input"
                 class="input input-bordered join-item w-[90%]"
                 placeholder=" Have any coupon?"
               />
@@ -396,8 +411,8 @@
               </button>
             </div>
             <div class="flex justify-between px-6 mt-4">
-              <h3>Grand Total</h3>
-              <h3>BDT 00</h3>
+              <h3 class="font-bold text-lg">Grand Total</h3>
+              <h3 class="font-bold text-lg">BDT 00</h3>
             </div>
           </div>
           <!-- passenger details section -->
@@ -405,7 +420,7 @@
             action="
          "
           >
-            <h3 class="mb-4">Passenger Name*</h3>
+            <h3 class="mb-4 font-bold text-lg">Passenger Name*</h3>
             <input
               placeholder=" Enter your name"
               type="text"
@@ -413,15 +428,15 @@
               id=""
               class="border mb-4 px-2 py-4 rounded-xl w-full"
             />
-            <h3 class="mb-4">Phone Number*</h3>
+            <h3 class="mb-4 font-bold text-lg">Phone Number*</h3>
             <input
               placeholder=" Enter your phone number"
               type="number"
               name=""
-              id=""
+              id="phone-input"
               class="border mb-4 px-2 py-4 rounded-xl w-full"
             />
-            <h3 class="mb-4">Email ID</h3>
+            <h3 class="mb-4 font-bold text-lg">Email ID</h3>
             <input
               placeholder=" Enter your email id"
               type="email"
@@ -430,11 +445,40 @@
               class="border px-2 py-4 rounded-xl w-full"
             />
           </form>
-          <button
+          <!-- -------------------------------------------------------------- -->
+          <!-- The button to open modal -->
+          <a
+            disabled
+            id="next-button"
+            href="#pop-up"
             class="btn w-full bg-[#1DD100] text-xl font-bold text-white rounded-xl mt-4"
+            >Next</a
           >
-            Next
-          </button>
+          <!-- Put this part before /body tag -->
+          <div class="modal" role="dialog" id="pop-up">
+            <div class="modal-box text-center">
+              <div class="flex justify-center mb-4">
+                <img class="" src="images/success.png" alt="" />
+              </div>
+              <h3 class="text-[#1DD100]">SUCCESS</h3>
+              <h3 class="font-bold text-sm lg:text-lg">
+                Thank you for Booking Our Bus Seats. <br />
+                We are working hard to find the best service and deals for you.
+              </h3>
+              <p class="py-4 text-xs lg:text-base">
+                Shortly you will find a confirmation in your mail.
+              </p>
+              <div class="modal-action flex justify-center">
+                <a
+                  href="#"
+                  class="btn bg-[#1DD100] px-10 rounded-full text-white"
+                  >Continue</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- ----------------------------------------------------------------- -->
+
           <div
             class="flex justify-around mt-4 underline text-xs lg:text-base gap-2 lg:gap-0"
           >
@@ -445,7 +489,7 @@
       </div>
     </main>
     <!-- footer section -->
-    <footer class="bg-[#030712] lg:p-36">
+    <footer class="bg-[#030712] font-raleway p-18 lg:p-36">
       <!-- first part -->
       <div
         class="flex flex-col lg:flex-row justify-between pb-10 text-white border-b-2 border-dashed border-[#ffffff4d]"
@@ -458,7 +502,7 @@
           </p>
         </div>
         <div>
-          <p class="mb-4 text-center">Download our app</p>
+          <p class="mb-4 lg:text-center">Download our app</p>
           <button class="btn bg-[#030712] text-white rounded-lg">
             <img src="images/playstore.png" alt="" />
             <p class="text-left font-thin text-md">
@@ -480,6 +524,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/utilities.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

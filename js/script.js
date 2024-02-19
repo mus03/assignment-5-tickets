@@ -60,6 +60,7 @@ function btn() {
   } else {
     document.getElementById("coupon-box").classList.add("hidden");
     setValueByElementById("current-grandPrice", CP);
+    showDiscountValue(0);
   }
 }
 document.getElementById("phone-input").addEventListener("keyup", function () {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P-Ticket</title>
+    <title>E-Tickets</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
       rel="stylesheet"
@@ -14,7 +14,7 @@
   </head>
   <body class="">
     <!-- header section -->
-    <header class="w-[95%] lg:w-[85%] mx-auto my-5 lg:my-10 font-raleway">
+    <header class="w-[95%] lg:w-[85%] mx-auto my-4 lg:my-10 font-raleway">
       <!-- nav-section -->
       <nav class="my-4">
         <div class="navbar bg-base-100">
@@ -46,8 +46,8 @@
                 <li><a>Search</a></li>
               </ul>
             </div>
-            <a class="text-xl lg:text-3xl lg:font-extrabold font-bold"
-              >P-Ticket</a
+            <a class="text-l lg:text-3xl lg:font-extrabold font-bold"
+              >B.B.-Ticket</a
             >
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -73,13 +73,13 @@
           class="text-white font-bold lg:font-extrabold text-xl lg:text-6xl pt-10 lg:pt-20 text-center lg:space-y-6 flex flex-col"
         >
           End-to-End Travel with <br />
-          <span class="text-[#1DD100] px-10 lg:px-20">P Paribahan</span>
+          <span class="text-[#1DD100] px-10 lg:px-20">B.B. Paribahan</span>
         </h1>
         <p
           class="text-sm lg:text-xl w-[90%] lg:w-[60%] mx-auto text-white lg:leading-10"
         >
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
+          B.B. Paribahan is a successful family owned transport company
+          specializing in transportation of passenger bus services.
         </p>
         <button
           class="btn bg-[#1DD100] text-black px-4 lg:px-10 border-none font-extrabold"
@@ -179,10 +179,12 @@
       class="font-raleway border-t-4 border-[#1DD100] rounded-3xl mx-auto bg-[#F7F8F8] py-8"
     >
       <div class="text-center my-10">
-        <h1 class="text-2xl lg:text-4xl font-bold mb-4">P.H Paribahan</h1>
+        <h1 class="text-2xl lg:text-4xl font-bold mb-4">B.B. Paribahan</h1>
         <p class="w-[95%] lg:w-[80%] mx-auto">
-          Yes, you can run unit tests and view the results directly within the
-          app. <br />The integrated testing features allow for a streamlined .
+          Select your seat from the available seats and enjoy travelling with
+          us.
+          <br />Moreover, You can buy tickets from our wide range o.f ticketing
+          booth and online
         </p>
       </div>
       <!-- ticket -->
@@ -196,16 +198,14 @@
           <div
             class="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0 items-center w-[95%] mx-auto lg:py-10 lg:pl-5"
           >
-            <div class="flex gap-4 w-full lg:w-[50%]">
+            <div class="py-2 lg:py-0 flex gap-4 w-full lg:w-[50%]">
               <img
                 class="w-[25%] lg:w-[20%] h-full lg:h-[10vh]"
                 src="images/bus-logo.png"
                 alt=""
               />
               <div class="flex flex-col">
-                <h3 class="font-bold text-xl lg:text-3xl">
-                  Greenline Paribahan
-                </h3>
+                <h3 class="font-bold text-xl lg:text-3xl">BB Paribahan</h3>
                 <p class="text-xs lg:text-base">Coach-009-WEB ! AC_Business</p>
               </div>
             </div>
@@ -223,20 +223,21 @@
             class="bg-[#F7F8F8] w-[95%] mx-auto my-4 lg:my-0 lg:mx-10 rounded-xl p-4"
           >
             <div class="flex justify-between">
-              <p>
-                <input placeholder="Route" class="bg-[#F7F8F8]" type="text" />
-              </p>
+              <input
+                placeholder="Route"
+                class="bg-[#F7F8F8] w-full flex-1"
+                type="text"
+              />
               <p class="text-xs lg:text-base">Dhaka-Sylhet</p>
             </div>
             <div class="divider"></div>
             <div class="flex justify-between">
-              <p>
-                <input
-                  placeholder="Department Time"
-                  class="bg-[#F7F8F8]"
-                  type="text"
-                />
-              </p>
+              <input
+                placeholder="Departure Time"
+                class="bg-[#F7F8F8] w-full flex-1"
+                type="text"
+              />
+
               <p class="text-xs lg:text-base">9.00 PM</p>
             </div>
             <div class="divider"></div>
@@ -373,7 +374,7 @@
         <!-- calculate price  -->
         <div class="w-full lg:w-[40%] p-5 lg:p-10">
           <h3 class="font-semibold text-2xl pb-6 border-dashed border-b-2 mb-6">
-            Select Your Seat
+            Booking Details
           </h3>
 
           <!-- grand total section -->
@@ -383,10 +384,10 @@
             >
               <h3 class="font-bold text-lg">
                 Seat
-                <span
+                <sup
                   id="current-seats"
                   class="bg-[#1DD100] text-white font-bold rounded-xl px-2"
-                  >0</span
+                  >0</sup
                 >
               </h3>
               <h3 class="font-bold text-lg lg:mr-8">Class</h3>
@@ -397,9 +398,15 @@
             <div class="flex justify-between px-6 mb-4">
               <h3 class="font-bold text-lg">Total Price</h3>
               <h3 class="font-bold text-lg">
-                BDT <span id="current-price">00</span>
+                BDT <span id="current-price">00.00</span>
               </h3>
             </div>
+            <p
+              id="discounted-box"
+              class="hidden font-bold text-sm text-red-600 px-6"
+            >
+              Discounted Price*: <span id="discounted-price">00</span>
+            </p>
             <div id="coupon-box" class="join w-[90%] mx-4 border">
               <input
                 id="coupon-input"
@@ -417,7 +424,7 @@
             <div class="flex justify-between px-6 mt-4">
               <h3 class="font-bold text-lg">Grand Total</h3>
               <h3 class="font-bold text-lg">
-                BDT <span id="current-grandPrice">00</span>
+                BDT <span id="current-grandPrice">00.00</span>
               </h3>
             </div>
           </div>
@@ -454,6 +461,7 @@
           <!-- -------------------------------------------------------------- -->
           <!-- The button to open modal -->
           <a
+            disabled
             id="next-button"
             href="#pop-up"
             class="btn w-full bg-[#1DD100] text-xl font-bold text-white rounded-xl mt-4"
@@ -500,14 +508,14 @@
         class="flex flex-col lg:flex-row justify-between pb-10 text-white border-b-2 border-dashed border-[#ffffff4d]"
       >
         <div class="space-y-4">
-          <h3 class="text-xl lg:text-2xl font-bold">P-Ticket</h3>
+          <h3 class="text-xl lg:text-2xl font-bold">B.B.-Ticket</h3>
           <p class="text-sm lg:text-base text-[#ffffffb3]">
-            P-Ticket is a digital platform to make your<br />
+            B.B.-Ticket is a digital platform to make your<br />
             daily commuting better.
           </p>
         </div>
         <div>
-          <p class="mb-4 my-4 lg:my-0 lg:text-center">Download our app</p>
+          <p class="mb-4 my-4 lg:text-center">Download our app</p>
           <button class="btn bg-[#030712] text-white rounded-lg">
             <img src="images/playstore.png" alt="" />
             <p class="text-left font-thin text-md">
@@ -522,7 +530,7 @@
         class="flex flex-col lg:flex-row justify-between mt-4 text-[#ffffffb3]"
       >
         <p class="text-sm lg:text-base">
-          @all rights reserved, P-Ticket services limited.2024
+          @all rights reserved, B.B.-Ticket services limited.2024
         </p>
         <div
           class="flex flex-col lg:flex-row gap-4 lg:mt-0 mt-4 text-sm lg:text-base"

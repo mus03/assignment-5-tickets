@@ -36,11 +36,13 @@ for (const row of parentDivChildren) {
           seatAddition.appendChild(eachRow);
           const updatedPrice = totalPrice("current-price", updatedSeats);
           totalPrice("current-grandPrice", updatedSeats);
+          document.getElementById(seatId).classList.add("pointer-events-none");
         }
       }
     });
   }
 }
+//coupon section
 function btn() {
   const couponInput = document.getElementById("coupon-input").value;
   const couponInputMatch = couponInput.toUpperCase();
@@ -50,30 +52,26 @@ function btn() {
   if (couponInputMatch === "NEW15") {
     const updatedGrandPrice = numCP - numCP * 0.15;
     setValueByElementById("current-grandPrice", updatedGrandPrice);
+    showDiscountValue(numCP * 0.15);
   } else if (couponInputMatch === "COUPLE 20") {
     const updatedGrandPrice = numCP - numCP * 0.2;
     setValueByElementById("current-grandPrice", updatedGrandPrice);
+    showDiscountValue(numCP * 0.2);
   } else {
     document.getElementById("coupon-box").classList.add("hidden");
     setValueByElementById("current-grandPrice", CP);
   }
 }
-// function enableButton() {
 document.getElementById("phone-input").addEventListener("keyup", function () {
   const nextButton = document.getElementById("next-button");
   const CS = getId("current-seats");
   let numCS = parseInt(CS);
   console.log(numCS);
-  const phoneInputValue = document.getElementById("phone-input").value;
-  // for (let i = 0; i > 4; i++) {
-  if (phoneInputValue.length > 0) {
-    if (numCS === 0) {
-      alert("Please select atleast one seat then put your number.");
-      nextButton.setAttribute("disabled", true);
-    }
+  let phoneInputValue = document.getElementById("phone-input").value;
+  if (phoneInputValue.length > 0 && numCS === 0) {
+    document.getElementById("phone-input").value = " ";
+    alert("Please select your seat first then put phone number");
   } else if (phoneInputValue.length > 0 && numCS > 0) {
-    // alert("Please provide your number");
-    nextButton.setAttribute("disabled", true);
+    nextButton.removeAttribute("disabled");
   }
 });
-// }

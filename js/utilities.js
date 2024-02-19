@@ -22,4 +22,7 @@ function totalPrice(elementId, seatNum) {
   setValueByElementById(elementId, updatedPrice);
   return updatedPrice;
 }
-// document.getElementById(seatId).setAttribute("disabled", true);
+function showDiscountValue(value) {
+  document.getElementById("discounted-box").classList.remove("hidden");
+  document.getElementById("discounted-price").innerText = value;
+}
